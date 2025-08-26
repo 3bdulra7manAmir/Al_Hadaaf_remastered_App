@@ -59,194 +59,74 @@ class S {
     return Intl.message('خطأ', name: 'error', desc: '', args: []);
   }
 
-  /// `أدخل البريد الإلكتروني`
-  String get enterEmail {
+  /// `ابحث عن لاعب, مدرب, اكاديمية ..`
+  String get homeSearchHint {
     return Intl.message(
-      'أدخل البريد الإلكتروني',
-      name: 'enterEmail',
+      'ابحث عن لاعب, مدرب, اكاديمية ..',
+      name: 'homeSearchHint',
       desc: '',
       args: [],
     );
   }
 
-  /// `البريد الإلكتروني مطلوب`
-  String get emailIsRequired {
+  /// `المباراة القادمة`
+  String get upComingMatch {
     return Intl.message(
-      'البريد الإلكتروني مطلوب',
-      name: 'emailIsRequired',
+      'المباراة القادمة',
+      name: 'upComingMatch',
       desc: '',
       args: [],
     );
   }
 
-  /// `يجب أن يحتوي البريد الإلكتروني على رمز '@'.`
-  String get invalidEmailSymbol {
+  /// `الاكاديميات`
+  String get academies {
+    return Intl.message('الاكاديميات', name: 'academies', desc: '', args: []);
+  }
+
+  /// `عرض الكل`
+  String get showAll {
+    return Intl.message('عرض الكل', name: 'showAll', desc: '', args: []);
+  }
+
+  /// `تسويق مدربين`
+  String get coachesMarketing {
     return Intl.message(
-      'يجب أن يحتوي البريد الإلكتروني على رمز \'@\'.',
-      name: 'invalidEmailSymbol',
+      'تسويق مدربين',
+      name: 'coachesMarketing',
       desc: '',
       args: [],
     );
   }
 
-  /// `يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).`
-  String get invalidEmailDomain {
-    return Intl.message(
-      'يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).',
-      name: 'invalidEmailDomain',
-      desc: '',
-      args: [],
-    );
+  /// `متجر النادى`
+  String get clubStore {
+    return Intl.message('متجر النادى', name: 'clubStore', desc: '', args: []);
   }
 
-  /// `خطأ في التحقق من البريد الإلكتروني:`
-  String get emailFailureValidation {
-    return Intl.message(
-      'خطأ في التحقق من البريد الإلكتروني:',
-      name: 'emailFailureValidation',
-      desc: '',
-      args: [],
-    );
+  /// `Watch`
+  String get watch {
+    return Intl.message('Watch', name: 'watch', desc: '', args: []);
   }
 
-  /// `الاسم الكامل مطلوب.`
-  String get fullNameIsRequired {
-    return Intl.message(
-      'الاسم الكامل مطلوب.',
-      name: 'fullNameIsRequired',
-      desc: '',
-      args: [],
-    );
+  /// `المنيو`
+  String get menu {
+    return Intl.message('المنيو', name: 'menu', desc: '', args: []);
   }
 
-  /// `يرجى إدخال اسم كامل صالح.`
-  String get fullNameinvalid {
-    return Intl.message(
-      'يرجى إدخال اسم كامل صالح.',
-      name: 'fullNameinvalid',
-      desc: '',
-      args: [],
-    );
+  /// `البروفايل`
+  String get profile {
+    return Intl.message('البروفايل', name: 'profile', desc: '', args: []);
   }
 
-  /// `فشل التحقق من الاسم الكامل:`
-  String get fullNameValidationFailure {
-    return Intl.message(
-      'فشل التحقق من الاسم الكامل:',
-      name: 'fullNameValidationFailure',
-      desc: '',
-      args: [],
-    );
+  /// `الخدمات`
+  String get services {
+    return Intl.message('الخدمات', name: 'services', desc: '', args: []);
   }
 
-  /// `كلمة المرور مطلوبة`
-  String get passwordIsRequired {
-    return Intl.message(
-      'كلمة المرور مطلوبة',
-      name: 'passwordIsRequired',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `يجب أن تكون كلمة المرور مكونة من ٨ أحرف على الأقل.`
-  String get passwordLength8Character {
-    return Intl.message(
-      'يجب أن تكون كلمة المرور مكونة من ٨ أحرف على الأقل.',
-      name: 'passwordLength8Character',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.`
-  String get passwordOneUpperCase {
-    return Intl.message(
-      'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.',
-      name: 'passwordOneUpperCase',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.`
-  String get passwordOneLowerCase {
-    return Intl.message(
-      'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.',
-      name: 'passwordOneLowerCase',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.`
-  String get passwordOneNumber {
-    return Intl.message(
-      'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.',
-      name: 'passwordOneNumber',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.`
-  String get passwordOneSpecialCharacter {
-    return Intl.message(
-      'يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.',
-      name: 'passwordOneSpecialCharacter',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `كلمة المرور غير صالحة`
-  String get invalidPassword {
-    return Intl.message(
-      'كلمة المرور غير صالحة',
-      name: 'invalidPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `خطأ في التحقق من كلمة المرور:`
-  String get passwordValidationFailure {
-    return Intl.message(
-      'خطأ في التحقق من كلمة المرور:',
-      name: 'passwordValidationFailure',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `رقم الهاتف مطلوب`
-  String get phoneNumberIsRequired {
-    return Intl.message(
-      'رقم الهاتف مطلوب',
-      name: 'phoneNumberIsRequired',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `رقم الهاتف غير صالح`
-  String get invalidPhoneNumber {
-    return Intl.message(
-      'رقم الهاتف غير صالح',
-      name: 'invalidPhoneNumber',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `رقم الهاتف غير مدعوم حالياً`
-  String get unsupportedPhoneNumber {
-    return Intl.message(
-      'رقم الهاتف غير مدعوم حالياً',
-      name: 'unsupportedPhoneNumber',
-      desc: '',
-      args: [],
-    );
+  /// `الرئيسيـة`
+  String get home {
+    return Intl.message('الرئيسيـة', name: 'home', desc: '', args: []);
   }
 }
 

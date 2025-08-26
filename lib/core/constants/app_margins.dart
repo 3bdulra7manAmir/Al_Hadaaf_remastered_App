@@ -22,8 +22,13 @@ class Directional
 {
   Directional._();
 
-  /// [directional: 16.w] End
-  EdgeInsetsDirectional get card => EdgeInsetsDirectional.only(end: 16.w);
+  /// [directional: 27.w] End
+  EdgeInsetsDirectional get notificationsBill => EdgeInsetsDirectional.only(end: 27.w);
+
+  /// [directional: 27.w] End
+  EdgeInsetsDirectional get bottomNavbar => EdgeInsetsDirectional.only(
+    end: 15.w, start: 15.w, bottom: 25.h, top: 25.h,
+  );
 }
 
 class Special

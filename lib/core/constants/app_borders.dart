@@ -21,8 +21,16 @@ class BorderCircular
 {
   BorderCircular._();
 
-  /// [circular: 2.r]
-  BorderRadius get card => BorderRadius.circular(2.r);
+  /// [circular: 12.r]
+  BorderRadius get introCardDot => BorderRadius.circular(12.r);
+  /// [circular: 20.r]
+  BorderRadius get coachesCard => BorderRadius.circular(20.r);
+  /// [circular: 25.r]
+  BorderRadius get textField => BorderRadius.circular(25.r);
+  /// [circular: 24.r]
+  BorderRadius get sportWidget => BorderRadius.circular(24.r);
+  /// [circular: 100.r]
+  BorderRadius get sportIcon => BorderRadius.circular(100.r);
 
 }
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../color_manager/colors.dart';
 import 'themes_styles.dart';
 
 class AppTheme
@@ -11,7 +10,7 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: AppColors.color.kWhite001, // Scaffold Background Color HERE
+      //scaffoldBackgroundColor: AppColors.color.kBlack001, // Scaffold Background Color HERE
       cardTheme: LightThemeStyles.cardTheme,
 
       elevatedButtonTheme: LightThemeStyles.elevatedButtonTheme,
@@ -29,7 +28,7 @@ class AppTheme
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.color.kWhite001, // Scaffold Background Color HERE
+      //scaffoldBackgroundColor: AppColors.color.kBlack001, // Scaffold Background Color HERE
       cardTheme: DarkThemeStyles.cardTheme,
 
       elevatedButtonTheme: DarkThemeStyles.elevatedButtonTheme,

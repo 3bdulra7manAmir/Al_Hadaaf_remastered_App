@@ -22,63 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "emailFailureValidation": MessageLookupByLibrary.simpleMessage(
-      "خطأ في التحقق من البريد الإلكتروني:",
-    ),
-    "emailIsRequired": MessageLookupByLibrary.simpleMessage(
-      "البريد الإلكتروني مطلوب",
-    ),
-    "enterEmail": MessageLookupByLibrary.simpleMessage(
-      "أدخل البريد الإلكتروني",
-    ),
+    "academies": MessageLookupByLibrary.simpleMessage("الاكاديميات"),
+    "clubStore": MessageLookupByLibrary.simpleMessage("متجر النادى"),
+    "coachesMarketing": MessageLookupByLibrary.simpleMessage("تسويق مدربين"),
     "error": MessageLookupByLibrary.simpleMessage("خطأ"),
-    "fullNameIsRequired": MessageLookupByLibrary.simpleMessage(
-      "الاسم الكامل مطلوب.",
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسيـة"),
+    "homeSearchHint": MessageLookupByLibrary.simpleMessage(
+      "ابحث عن لاعب, مدرب, اكاديمية ..",
     ),
-    "fullNameValidationFailure": MessageLookupByLibrary.simpleMessage(
-      "فشل التحقق من الاسم الكامل:",
-    ),
-    "fullNameinvalid": MessageLookupByLibrary.simpleMessage(
-      "يرجى إدخال اسم كامل صالح.",
-    ),
-    "invalidEmailDomain": MessageLookupByLibrary.simpleMessage(
-      "يجب أن ينتهي البريد الإلكتروني بنطاق صالح (مثل .com، .org).",
-    ),
-    "invalidEmailSymbol": MessageLookupByLibrary.simpleMessage(
-      "يجب أن يحتوي البريد الإلكتروني على رمز \'@\'.",
-    ),
-    "invalidPassword": MessageLookupByLibrary.simpleMessage(
-      "كلمة المرور غير صالحة",
-    ),
-    "invalidPhoneNumber": MessageLookupByLibrary.simpleMessage(
-      "رقم الهاتف غير صالح",
-    ),
-    "passwordIsRequired": MessageLookupByLibrary.simpleMessage(
-      "كلمة المرور مطلوبة",
-    ),
-    "passwordLength8Character": MessageLookupByLibrary.simpleMessage(
-      "يجب أن تكون كلمة المرور مكونة من ٨ أحرف على الأقل.",
-    ),
-    "passwordOneLowerCase": MessageLookupByLibrary.simpleMessage(
-      "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.",
-    ),
-    "passwordOneNumber": MessageLookupByLibrary.simpleMessage(
-      "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.",
-    ),
-    "passwordOneSpecialCharacter": MessageLookupByLibrary.simpleMessage(
-      "يجب أن تحتوي كلمة المرور على رمز خاص واحد على الأقل.",
-    ),
-    "passwordOneUpperCase": MessageLookupByLibrary.simpleMessage(
-      "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.",
-    ),
-    "passwordValidationFailure": MessageLookupByLibrary.simpleMessage(
-      "خطأ في التحقق من كلمة المرور:",
-    ),
-    "phoneNumberIsRequired": MessageLookupByLibrary.simpleMessage(
-      "رقم الهاتف مطلوب",
-    ),
-    "unsupportedPhoneNumber": MessageLookupByLibrary.simpleMessage(
-      "رقم الهاتف غير مدعوم حالياً",
-    ),
+    "menu": MessageLookupByLibrary.simpleMessage("المنيو"),
+    "profile": MessageLookupByLibrary.simpleMessage("البروفايل"),
+    "services": MessageLookupByLibrary.simpleMessage("الخدمات"),
+    "showAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+    "upComingMatch": MessageLookupByLibrary.simpleMessage("المباراة القادمة"),
+    "watch": MessageLookupByLibrary.simpleMessage("Watch"),
   };
 }

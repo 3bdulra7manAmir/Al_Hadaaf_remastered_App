@@ -7,6 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../config/i18n/generated/l10n.dart';
 import '../config/router/app_router.dart';
 import '../config/theme/theme_manager/themes.dart';
+import 'config/i18n/localization_controller/localization_cubit.dart';
+import 'config/theme/theme_controller/theme_cubit.dart';
+import 'core/utils/cubit_states.dart';
 
 class AlHadaaf extends StatelessWidget
 {
@@ -15,48 +18,98 @@ class AlHadaaf extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return DevicePreview(
-      enabled: false,
-      builder: (context) => ScreenUtilInit(
-        designSize: const Size(375, 812),
-        builder: (context, child) => MultiBlocProvider(
-          providers: const [],
-          child: const AlHadaafMaterial(),
-        ),
-      ),
-    );
+    return const AlHadaafDevicePreview();
   }
 }
 
-class AlHadaafMaterial extends StatelessWidget
+
+class AlHadaafDevicePreview extends StatelessWidget
 {
-  const AlHadaafMaterial({super.key,});
+  const AlHadaafDevicePreview({super.key,});
 
   @override
   Widget build(BuildContext context)
   {
-    return MaterialApp.router(
-      // Routing
-      routerConfig: AppRouter.router,
-      
-      // Localization
-      localizationsDelegates:
-      const [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      //locale: localProvider,
-
-      //Theming
-      theme: AppTheme.lightTheme(),
-      darkTheme: AppTheme.darkTheme(),
-      //themeMode: themeProvider,
-      
-      //ETC...
-      debugShowCheckedModeBanner: false,
+    return DevicePreview(
+      enabled: false,
+      builder: (context) => const AlHadaafScreenUtil(),
     );
   }
 }
+
+
+class AlHadaafScreenUtil extends StatelessWidget
+{
+  const AlHadaafScreenUtil({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return ScreenUtilInit(
+      designSize: const Size(440, 956),
+      builder: (context, child) => const AlHadaafMultiProvider(),
+    );
+  }
+}
+
+
+class AlHadaafMultiProvider extends StatelessWidget
+{
+  const AlHadaafMultiProvider({super.key,});
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return MultiBlocProvider(
+      providers:
+      [
+        BlocProvider(create: (_) => ThemeCubit()),
+        BlocProvider(create: (_) => LocalizationCubit()),
+      ],
+      child: const AlHadaafMaterial(),
+    );
+  }
+}
+
+
+class AlHadaafMaterial extends StatelessWidget
+{
+  const AlHadaafMaterial({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<ThemeCubit, DefaultState<ThemeMode>>(
+      builder: (context, themeState) {
+        ThemeMode themeMode = ThemeMode.dark;
+        if (themeState is SuccessState<ThemeMode>) themeMode = themeState.data;
+
+        return BlocBuilder<LocalizationCubit, DefaultState<Locale>>(
+          builder: (context, localeState) {
+            Locale locale = const Locale('ar');
+            if (localeState is SuccessState<Locale>) locale = localeState.data;
+
+            return MaterialApp.router(
+              routerConfig: AppRouter.router,
+
+              localizationsDelegates: const [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: S.delegate.supportedLocales,
+              locale: locale,
+
+              theme: AppTheme.lightTheme(),
+              darkTheme: AppTheme.darkTheme(),
+              themeMode: themeMode,
+
+              debugShowCheckedModeBanner: false,
+            );
+          },
+        );
+      },
+    );
+  }
+}
+

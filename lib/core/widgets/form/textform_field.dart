@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../config/theme/color_manager/colors.dart';
-import '../../../config/theme/font_manager/font_weights.dart';
 import '../../constants/app_styles.dart';
 
 
@@ -68,7 +67,7 @@ class CustomTextFormField extends StatelessWidget
         decoration: InputDecoration(
           hintText: hintText,
           hintTextDirection: hintTextDirection,
-          hintStyle: hintStyle ?? AppStyles.extraThin(fontColor: AppColors.color.kBlack001, fontWeight: AppFontWeights.boldWeight), // Hint Text Style here and Color
+          hintStyle: hintStyle ?? AppStyles.thin(fontColor: AppColors.color.kWhite001.withValues(alpha: 0.48)),
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           suffixStyle: suffixStyle,

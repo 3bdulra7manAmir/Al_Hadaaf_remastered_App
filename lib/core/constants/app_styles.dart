@@ -9,51 +9,7 @@ abstract class AppStyles
 {
   AppStyles._();
 
-  /// Size= [23] Weight= [w900], Color= [_0C0D0D],
-  static TextStyle black({
-    double? fontSize,
-    FontWeight? fontWeight,
-    Color? fontColor,
-    String? fontFamily,
-    TextDecoration? textDecoration,
-    Color? textDecorationColor,
-    TextOverflow? textOverflow,
-  })
-  {
-    return TextStyle(
-      fontSize: fontSize ?? AppFontSizes.large.sp,
-      fontWeight: fontWeight ?? AppFontWeights.blackWeight,
-      color: fontColor ?? AppColors.color.kBlack001,
-      fontFamily: fontFamily ?? AppFonts.font.fontName,
-      decoration: textDecoration ?? TextDecoration.none,
-      decorationColor: textDecorationColor,
-      overflow: textOverflow ?? TextOverflow.ellipsis,
-    );
-  }
-
-  /// Size= [19] Weight= [w700], Color= [_0C0D0D],
-  static TextStyle bold({
-    double? fontSize,
-    FontWeight? fontWeight,
-    Color? fontColor,
-    String? fontFamily,
-    TextDecoration? textDecoration,
-    Color? textDecorationColor,
-    TextOverflow? textOverflow,
-  })
-  {
-    return TextStyle(
-      fontSize: fontSize ?? AppFontSizes.xMeduim.sp,
-      fontWeight: fontWeight ?? AppFontWeights.boldWeight,
-      color: fontColor ?? AppColors.color.kBlack001,
-      fontFamily: fontFamily ?? AppFonts.font.fontName,
-      decoration: textDecoration ?? TextDecoration.none,
-      decorationColor: textDecorationColor,
-      overflow: textOverflow ?? TextOverflow.ellipsis,
-    );
-  }
-
-  /// Size= [16] Weight= [w700], Color= [_FFFFFF],
+  /// Size= [16] Weight= [w400], Color= [_FFFFFF],
   static TextStyle semiBold({
     double? fontSize,
     FontWeight? fontWeight,
@@ -66,7 +22,7 @@ abstract class AppStyles
   {
     return TextStyle(
       fontSize: fontSize ?? AppFontSizes.meduim.sp,
-      fontWeight: fontWeight ?? AppFontWeights.boldWeight,
+      fontWeight: fontWeight ?? AppFontWeights.regularWeight,
       color: fontColor ?? AppColors.color.kWhite001,
       fontFamily: fontFamily ?? AppFonts.font.fontName,
       decoration: textDecoration ?? TextDecoration.none,
@@ -75,7 +31,7 @@ abstract class AppStyles
     );
   }
 
-  /// Size= [14] Weight= [w400], Color= [_9796A1],
+  /// Size= [14] Weight= [w400], Color= [_#FFFFFF],
   static TextStyle thin({
     double? fontSize,
     FontWeight? fontWeight,
@@ -88,8 +44,8 @@ abstract class AppStyles
   {
     return TextStyle(
       fontSize: fontSize ?? AppFontSizes.xSmall.sp,
-      fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
-      color: fontColor ?? AppColors.color.kBlack001,
+      fontWeight: fontWeight ?? AppFontWeights.regularWeight,
+      color: fontColor ?? AppColors.color.kWhite001,
       fontFamily: fontFamily ?? AppFonts.font.fontName,
       decoration: textDecoration ?? TextDecoration.none,
       decorationColor: textDecorationColor,
@@ -97,7 +53,7 @@ abstract class AppStyles
     );
   }
 
-  /// Size= [13] Weight= [w600], Color= [_4E5556],
+  /// Size= [12] Weight= [w400], Color= [_FFFFFF],
   static TextStyle semiThin({
     double? fontSize,
     FontWeight? fontWeight,
@@ -110,29 +66,7 @@ abstract class AppStyles
   {
     return TextStyle(
       fontSize: fontSize ?? AppFontSizes.xXSmall.sp,
-      fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
-      color: fontColor ?? AppColors.color.kGrey001,
-      fontFamily: fontFamily ?? AppFonts.font.fontName,
-      decoration: textDecoration ?? TextDecoration.none,
-      decorationColor: textDecorationColor,
-      overflow: textOverflow ?? TextOverflow.ellipsis,
-    );
-  }
-
-  /// Size= [11] Weight= [w600], Color= [_FFFFFF],
-  static TextStyle extraThin({
-    double? fontSize,
-    FontWeight? fontWeight,
-    Color? fontColor,
-    String? fontFamily,
-    TextDecoration? textDecoration,
-    Color? textDecorationColor,
-    TextOverflow? textOverflow,
-  })
-  {
-    return TextStyle(
-      fontSize: fontSize ?? AppFontSizes.xXXSmall.sp,
-      fontWeight: fontWeight ?? AppFontWeights.semiBoldWeight,
+      fontWeight: fontWeight ?? AppFontWeights.regularWeight,
       color: fontColor ?? AppColors.color.kWhite001,
       fontFamily: fontFamily ?? AppFonts.font.fontName,
       decoration: textDecoration ?? TextDecoration.none,
@@ -140,4 +74,5 @@ abstract class AppStyles
       overflow: textOverflow ?? TextOverflow.ellipsis,
     );
   }
+
 }

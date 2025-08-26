@@ -12,6 +12,6 @@ class CustomErrorWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Center(child: Text('${S.current.error}: $e', style: AppStyles.black(),));
+    return Center(child: Text('${S.current.error}: $e', style: AppStyles.semiBold(),));
   }
 }

@@ -1,27 +1,18 @@
 {
   "@@locale": "en",
+
   "error": "Error",
 
-  "enterEmail": "Enter email",
-  "emailIsRequired": "Email is required",
-  "invalidEmailSymbol": "Email must contain '@' symbol.",
-  "invalidEmailDomain": "Email must end with a valid domain (e.g., .com, .org).",
-  "emailFailureValidation": "Error validating email:",
+  "homeSearchHint": "Search for player, coach, academy ..",
+  "upComingMatch": "Upcoming Match",
+  "academies": "Academies",
+  "showAll": "Show All",
+  "coachesMarketing": "Coaches Marketing",
+  "clubStore": "Club Store",
+  "watch": "Watch",
 
-  "fullNameIsRequired": "Full name is required.",
-  "fullNameinvalid": "Please enter a valid full name.",
-  "fullNameValidationFailure": "Validation failed for full name:",
-
-  "passwordIsRequired": "Password is required",
-  "passwordLength8Character": "Password must be at least 8 characters long.",
-  "passwordOneUpperCase": "Password must contain at least one uppercase letter.",
-  "passwordOneLowerCase": "Password must contain at least one lowercase letter.",
-  "passwordOneNumber": "Password must contain at least one number.",
-  "passwordOneSpecialCharacter": "Password must contain at least one special character.",
-  "invalidPassword": "Invalid Password",
-  "passwordValidationFailure": "Error validating password:",
-
-  "phoneNumberIsRequired": "Phone number is required",
-  "invalidPhoneNumber": "Invalid phone number",
-  "unsupportedPhoneNumber": "Un-Supported phone number"
+  "menu": "Menu",
+  "profile": "Profile",
+  "services": "Services",
+  "home": "Home"
 }

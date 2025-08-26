@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../constants/app_styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget 
 {
   const CustomAppBar({
     super.key,
     this.backgroundColor,
-    required this.barTitle,
+    this.title,
     this.leadingWidth,
     this.leading,
     this.actions,
@@ -17,7 +15,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   });
 
   final Color? backgroundColor;
-  final String barTitle;
+  final Widget? title;
   final double? leadingWidth;
   final Widget? leading;
   final List<Widget>? actions;
@@ -29,13 +27,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget
   {
     return AppBar(
       backgroundColor: backgroundColor,
-      centerTitle: true,
-      title: Text(barTitle, style: AppStyles.black()), //Define Style HERE
-      automaticallyImplyLeading: false,
-      leadingWidth: leadingWidth ?? 44.w, //Define Width HERE
+      title: title, centerTitle: true,
+
       leading: leading,
+      leadingWidth: leadingWidth,
+
       actions: actions,
       actionsPadding: actionsPadding,
+      automaticallyImplyLeading: false,
     );
   }
 

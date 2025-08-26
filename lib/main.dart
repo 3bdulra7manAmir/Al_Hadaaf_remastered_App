@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+import 'config/bloc_observer.dart';
+import 'core/services/database/shared_preferences/shared_pref_initialization.dart';
+import 'main_app.dart';
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  void main() async
+{
+  WidgetsFlutterBinding.ensureInitialized();
+  /// [Shared_Pref]
+  await SharedPrefInit.init();
+  /// [Bloc Observer]
+  Bloc.observer = const SimpleBlocObserver();
+  
+  //App Run
+  runApp(const AlHadaaf(),);
 }

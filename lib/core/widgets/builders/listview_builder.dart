@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/app_paddings.dart';
+
 class CustomListviewBuilder extends StatelessWidget
 {
 
@@ -31,7 +33,7 @@ class CustomListviewBuilder extends StatelessWidget
       scrollDirection: scrollDirection ?? Axis.vertical,
       reverse: reverse ?? false,
       physics: physics ?? const ScrollPhysics(),
-      padding: padding,
+      padding: padding ?? AppPadding.special.zero,
       shrinkWrap: true,
     );
   }

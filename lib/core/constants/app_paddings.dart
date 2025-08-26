@@ -17,8 +17,8 @@ class All
 {
   All._();
 
-  ///[all: 17px]
-  final EdgeInsets trackClosedOrder = const EdgeInsets.all(17);
+  ///[all: 4]
+  final EdgeInsets sportBall = const EdgeInsets.all(4);
 }
 
 
@@ -26,8 +26,8 @@ class Symmetric
 {
   Symmetric._();
 
-  ///[horizontal: 5px]
-  EdgeInsets get card => EdgeInsets.symmetric(horizontal: 5.w);
+  ///[horizontal: 6px]
+  EdgeInsets get sportWidget => EdgeInsets.symmetric(vertical: 6.w);
 
 }
 
@@ -38,6 +38,9 @@ class Directional
 
   ///[25px] start
   EdgeInsetsDirectional get card => EdgeInsetsDirectional.only(start: 25.w,);
+  ///[25px] start
+  EdgeInsetsDirectional get bottomNavBar => EdgeInsetsDirectional.only(
+    start: 27.w, end: 27.w, top: 15.h, bottom: 11.h);
 
 }
 
