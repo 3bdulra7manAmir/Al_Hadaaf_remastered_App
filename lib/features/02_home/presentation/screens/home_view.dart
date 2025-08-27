@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -64,8 +63,9 @@ class Home extends StatelessWidget
               TitleAndShowAllText(title: S.current.coachesMarketing, onTap: () => AppLogger.info('ShowAll...'),),
               Sizes.s24.verticalSpace,
               PlayerScrollMenu(
-                widgets: const [CoachesCard(),], 
-                height: 300.h,),
+                widgets: const [CoachesCard(),CoachesCard(),CoachesCard(),], 
+                height: 300.h, viewportFraction: 0.65,
+                ),
               Sizes.s41.verticalSpace,
               TitleAndShowAllText(title: S.current.clubStore, onTap: () => AppLogger.info('ShowAll...'),),
               Sizes.s20.verticalSpace,

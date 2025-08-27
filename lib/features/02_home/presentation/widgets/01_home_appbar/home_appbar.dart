@@ -24,7 +24,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget
         leadingWidth: (112.w + 27.w),
         actions:
         [
-          InkWell(
+          GestureDetector(
             onTap: () => AppLogger.info('NotificationsBell'),
             child: const AppBarBell(),
           ),

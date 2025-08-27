@@ -12,7 +12,7 @@ class CustomCarousel extends StatelessWidget
     required this.onPageChanged,
     required this.enlargeCenterPage,
     required this.autoPlay, 
-    this.height,
+    this.height, this.viewportFraction,
   });
 
   final List<String>? imgs;
@@ -22,6 +22,7 @@ class CustomCarousel extends StatelessWidget
   final bool enlargeCenterPage;
   final bool autoPlay;
   final Function(int) onPageChanged;
+  final double? viewportFraction;
 
   @override
   Widget build(BuildContext context)
@@ -39,6 +40,8 @@ class CustomCarousel extends StatelessWidget
         }
       },
       options: CarouselOptions(
+        viewportFraction: viewportFraction ?? 0.8,
+        disableCenter: true,
         height: height,
         enlargeCenterPage: enlargeCenterPage,
         autoPlay: autoPlay,

@@ -15,7 +15,7 @@ class CustomColumn extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    (isMargin ?? true) ? AppLogger.debug('Custom Column Margin -> 27.w'): null;
+    (isMargin ?? true) ? AppLogger.debug('Custom Column Margin -> 27.w') : null;
     return Column(
       crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
       children: children

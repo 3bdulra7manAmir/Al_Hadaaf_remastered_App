@@ -18,7 +18,7 @@ class CoacheInfoCard extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Positioned(
-      top: 197.h + 9.h, // الصورة + البوكس
+      top: 197.h + 9.h,
       left: 0, right: 0,
       child: Container(
         alignment: Alignment.center, height: 91.h,

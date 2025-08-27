@@ -15,7 +15,7 @@ class WatchCardList extends StatelessWidget
   {
     return CustomListviewBuilder(
       itemBuilder: (_, _) => 
-      InkWell(
+      GestureDetector(
         onTap: () => AppLogger.info('Play Pressed...'),
         child: const WatchCard()
       ), 

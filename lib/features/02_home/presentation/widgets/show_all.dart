@@ -27,7 +27,7 @@ class TitleAndShowAllText extends StatelessWidget
       children:
       [
         Text(title, style: AppStyles.semiBold(fontWeight: AppFontWeights.mediumWeight),),
-        InkWell(
+        GestureDetector(
           onTap: onTap,
           child: ShowAllText(showAll: S.current.showAll,)
         )

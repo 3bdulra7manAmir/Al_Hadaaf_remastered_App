@@ -19,10 +19,15 @@ class MainScaffold extends StatelessWidget
     return Scaffold(
       appBar: _buildAppBar(currentIndex),
       body: navigationShell,
-      bottomNavigationBar: CustomButtomNavBar(
+      //backgroundColor: AppColors.color.kBlack002,
+      //bottomNavigationBar: CustomButtomNavBar(
+      //   currentIndex: currentIndex, onTap: _goBranch,
+      // ),
+      floatingActionButton: CustomButtomNavBar(
         currentIndex: currentIndex,
         onTap: _goBranch,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 

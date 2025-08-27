@@ -28,7 +28,7 @@ class NavBarItem extends StatelessWidget
   {
     final Color activeColor = AppColors.color.kGreen001;
     final Color inactiveColor = AppColors.color.kWhite001.withValues(alpha: 0.7);
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
       child: Column(
         mainAxisSize: MainAxisSize.min,

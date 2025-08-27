@@ -27,7 +27,8 @@ class CustomTextFormField extends StatelessWidget
     this.focusedColor,
     this.borderRadius,
     this.borderRadiusColor,
-    this.contentPadding,
+    this.contentPadding, 
+    this.onChanged,
   });
 
   final double? height;
@@ -39,6 +40,7 @@ class CustomTextFormField extends StatelessWidget
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final void Function(String)? onSubmitted;
+  final void Function(String)? onChanged;
   final String? hintText;
   final TextDirection? hintTextDirection;
   final TextStyle? hintStyle;
@@ -64,6 +66,7 @@ class CustomTextFormField extends StatelessWidget
         controller: controller,
         validator: validator,
         onFieldSubmitted: onSubmitted,
+        onChanged: onChanged,
         decoration: InputDecoration(
           hintText: hintText,
           hintTextDirection: hintTextDirection,

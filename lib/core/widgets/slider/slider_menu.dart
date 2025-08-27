@@ -14,7 +14,8 @@ class PlayerScrollMenu extends StatefulWidget
     this.widgets,
     this.enlargeCenterPage, 
     this.autoPlay, 
-    this.height
+    this.height, 
+    this.viewportFraction
   });
 
   final List<String>? imgs;
@@ -22,6 +23,7 @@ class PlayerScrollMenu extends StatefulWidget
   final bool? enlargeCenterPage;
   final bool? autoPlay;
   final double? height;
+  final double? viewportFraction;
 
   @override
   State<PlayerScrollMenu> createState() => _PlayerScrollMenuState();
@@ -46,7 +48,7 @@ class _PlayerScrollMenuState extends State<PlayerScrollMenu>
           enlargeCenterPage: widget.enlargeCenterPage ?? true,
           autoPlay: widget.autoPlay ?? true,
           onPageChanged: (index) => setState(() => current = index), 
-          height: widget.height,
+          height: widget.height, viewportFraction: widget.viewportFraction ?? 0.8,
         ),
         Sizes.s17.verticalSpace,
         SliderDots(

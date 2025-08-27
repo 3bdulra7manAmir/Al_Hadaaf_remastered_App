@@ -24,11 +24,12 @@ class CustomButtomNavBar extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      height: 75.h,
+      height: 90.h,
       margin: AppMargins.directional.bottomNavbar,
       padding: AppPadding.directional.bottomNavBar,
       decoration: BoxDecoration(
         color: AppColors.color.kBlack002,
+        //gradient: AppColors.gradient.kBackgroundLinear,
         borderRadius: AppRadiuses.circular.sportWidget,
       ),
       child: Row(

@@ -27,7 +27,7 @@ class Directional
 
   /// [directional: 27.w] End
   EdgeInsetsDirectional get bottomNavbar => EdgeInsetsDirectional.only(
-    end: 15.w, start: 15.w, bottom: 25.h, top: 25.h,
+    end: 15.w, start: 15.w, bottom: 10.h, top: 25.h,
   );
 }
 
