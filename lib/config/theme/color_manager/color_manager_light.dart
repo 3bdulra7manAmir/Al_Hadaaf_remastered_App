@@ -11,11 +11,14 @@ class LightColorScheme extends ColorManagerBase
 
   // Black Color Range
   @override
-  /// [313131]
-  Color get kBlack001 => const Color(0xff313131);
+  /// [000000]
+  Color get kBlack001 => const Color(0xff000000);
   @override
   /// [2D2D2D]
   Color get kBlack002 => const Color(0xff2D2D2D);
+  @override
+  /// [333333]
+  Color get kBlack003 => const Color(0xff333333);
   @override
   /// [333333]
   Color get kBlack004 => const Color(0xff333333);

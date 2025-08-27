@@ -31,7 +31,7 @@ class AlHadaafDevicePreview extends StatelessWidget
   Widget build(BuildContext context)
   {
     return DevicePreview(
-      enabled: false,
+      enabled: true,
       builder: (context) => const AlHadaafScreenUtil(),
     );
   }

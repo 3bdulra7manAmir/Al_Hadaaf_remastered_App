@@ -128,6 +128,31 @@ class S {
   String get home {
     return Intl.message('الرئيسيـة', name: 'home', desc: '', args: []);
   }
+
+  /// `مستوى التدريب`
+  String get trainingLevel {
+    return Intl.message(
+      'مستوى التدريب',
+      name: 'trainingLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `جنسية`
+  String get nationality {
+    return Intl.message('جنسية', name: 'nationality', desc: '', args: []);
+  }
+
+  /// `تاريخ الميــــلاد`
+  String get birthDate {
+    return Intl.message(
+      'تاريخ الميــــلاد',
+      name: 'birthDate',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

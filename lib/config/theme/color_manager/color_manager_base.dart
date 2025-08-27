@@ -7,10 +7,12 @@ abstract class ColorManagerBase
   Color get kTransparent;
 
   // Black Color Range
-  /// [313131] //NotUsed
+  /// [000000] //NotUsed
   Color get kBlack001;
   /// [2D2D2D]
   Color get kBlack002;
+  /// [333333]
+  Color get kBlack003;
   /// [000000]
   Color get kBlack004;
 

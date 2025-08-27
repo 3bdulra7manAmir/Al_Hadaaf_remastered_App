@@ -67,8 +67,8 @@ class Home extends StatelessWidget
               Sizes.s24.verticalSpace,
               //Ahmed Sayed
               PlayerScrollMenu(
-                widgets: const [CoachesCard(), CoachesCard()], 
-                height: 210.h,
+                widgets: const [CoachesCard(),], 
+                height: 300.h,
               ),
               //
               Sizes.s41.verticalSpace,

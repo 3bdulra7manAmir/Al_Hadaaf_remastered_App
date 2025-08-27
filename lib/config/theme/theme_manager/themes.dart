@@ -13,7 +13,7 @@ class AppTheme
       //scaffoldBackgroundColor: AppColors.color.kBlack001, // Scaffold Background Color HERE
       cardTheme: LightThemeStyles.cardTheme,
 
-      elevatedButtonTheme: LightThemeStyles.elevatedButtonTheme,
+      //elevatedButtonTheme: LightThemeStyles.elevatedButtonTheme,
       inputDecorationTheme: LightThemeStyles.inputBorder,
 
       appBarTheme: LightThemeStyles.appBarTheme,
@@ -31,7 +31,7 @@ class AppTheme
       //scaffoldBackgroundColor: AppColors.color.kBlack001, // Scaffold Background Color HERE
       cardTheme: DarkThemeStyles.cardTheme,
 
-      elevatedButtonTheme: DarkThemeStyles.elevatedButtonTheme,
+      //elevatedButtonTheme: DarkThemeStyles.elevatedButtonTheme,
       inputDecorationTheme: DarkThemeStyles.inputBorder,
 
       appBarTheme: DarkThemeStyles.appBarTheme,

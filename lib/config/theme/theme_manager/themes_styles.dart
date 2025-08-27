@@ -12,21 +12,22 @@ abstract class LightThemeStyles
 {
   LightThemeStyles._();
 
-  static ElevatedButtonThemeData get elevatedButtonTheme => ElevatedButtonThemeData(
-    style: ButtonStyle(
-      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-        RoundedRectangleBorder(
-          borderRadius: AppRadiuses.circular.textField, // Button Border Radius HERE
-          side: BorderSide(color: AppColors.color.kTransparent,),), // Button Side Color HERE
-      ),
-      backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlack001), // Buton BackGround Text Here...
-      overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
-      shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
-      elevation: WidgetStateProperty.all(0),
-      splashFactory: NoSplash.splashFactory,
-      alignment: Alignment.center,
-    ),
-  );
+  // static ElevatedButtonThemeData get elevatedButtonTheme => ElevatedButtonThemeData(
+  //   style: ButtonStyle(
+  //     shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+  //       RoundedRectangleBorder(
+  //         borderRadius: AppRadiuses.circular.textField, // Button Border Radius HERE
+  //         side: BorderSide(color: AppColors.color.kTransparent,),), // Button Side Color HERE
+  //     ),
+  //     backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlack001), // Buton BackGround Text Here...
+  //     overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
+  //     shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+  //     elevation: WidgetStateProperty.all(0),
+  //     splashFactory: NoSplash.splashFactory,
+  //     alignment: Alignment.center,
+  //   ),
+  // );
+
 
   static InputDecorationTheme get inputBorder => InputDecorationTheme(
     border: textFieldBorder(),
@@ -51,13 +52,15 @@ abstract class LightThemeStyles
   static CardThemeData get cardTheme => CardThemeData(
     elevation: 0,
     margin: AppMargins.special.zero,
-    //color: AppColors.color.,
+    color: AppColors.color.kTransparent,
     //shape: RoundedRectangleBorder(borderRadius: AppRadiuses.circular.),
   );
   
   static AppBarTheme get appBarTheme => AppBarTheme(
     scrolledUnderElevation: 0,
     surfaceTintColor: AppColors.color.kTransparent,
+    backgroundColor: AppColors.color.kTransparent,
+    elevation: 0,
   );
 
   static DialogThemeData get dialogTheme => const DialogThemeData();
@@ -71,21 +74,22 @@ abstract class DarkThemeStyles
 {
   DarkThemeStyles._();
 
-  static ElevatedButtonThemeData get elevatedButtonTheme => ElevatedButtonThemeData(
-    style: ButtonStyle(
-      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-        RoundedRectangleBorder(
-          borderRadius: AppRadiuses.circular.textField, // Button Border Radius HERE
-          side: BorderSide(color: AppColors.color.kTransparent,),), // Button Side Color HERE
-      ),
-      backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlack001), // Buton BackGround Text Here...
-      overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
-      shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
-      elevation: WidgetStateProperty.all(0),
-      splashFactory: NoSplash.splashFactory,
-      alignment: Alignment.center,
-    ),
-  );
+  // static ElevatedButtonThemeData get elevatedButtonTheme => ElevatedButtonThemeData(
+  //   style: ButtonStyle(
+  //     shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+  //       RoundedRectangleBorder(
+  //         borderRadius: AppRadiuses.circular.textField, // Button Border Radius HERE
+  //         side: BorderSide(color: AppColors.color.kTransparent,),), // Button Side Color HERE
+  //     ),
+  //     backgroundColor: WidgetStateProperty.all<Color>(AppColors.color.kBlack001), // Buton BackGround Text Here...
+  //     overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
+  //     shadowColor: WidgetStateProperty.all<Color>(Colors.transparent),
+  //     elevation: WidgetStateProperty.all(0),
+  //     splashFactory: NoSplash.splashFactory,
+  //     alignment: Alignment.center,
+  //   ),
+  // );
+
 
   static InputDecorationTheme get inputBorder => InputDecorationTheme(
     border: textFieldBorder(),

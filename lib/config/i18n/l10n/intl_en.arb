@@ -14,5 +14,9 @@
   "menu": "Menu",
   "profile": "Profile",
   "services": "Services",
-  "home": "Home"
+  "home": "Home",
+
+  "trainingLevel": "Training Level",
+  "nationality": "Nationality",
+  "birthDate": "Date of Birth"
 }

@@ -25,5 +25,6 @@ abstract class Sizes
   static const double s26 = 26.0;
   static const double s28 = 28.0;
   static const double s29 = 29.0;
+  static const double s35 = 35.0;
   static const double s41 = 41.0;
 }

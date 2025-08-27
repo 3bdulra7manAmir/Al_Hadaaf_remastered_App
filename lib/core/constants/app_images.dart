@@ -16,6 +16,7 @@ class _IconsPNG
   /// [ Home ]
   //[Al-Haddaf.png]
   final String appLogo = 'assets/icons/App_Logo/Al-Haddaf.png';
+  final String egyptFlag = 'assets/icons/Home/Egypt_flag.png';
 }
 ///-----------------------------------------------------------------//
 

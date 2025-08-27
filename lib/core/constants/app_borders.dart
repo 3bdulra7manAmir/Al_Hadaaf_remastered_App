@@ -23,6 +23,8 @@ class BorderCircular
 
   /// [circular: 12.r]
   BorderRadius get introCardDot => BorderRadius.circular(12.r);
+  /// [circular: 16.r]
+  BorderRadius get coacheInfoCard => BorderRadius.circular(16.r);
   /// [circular: 20.r]
   BorderRadius get coachesCard => BorderRadius.circular(20.r);
   /// [circular: 25.r]

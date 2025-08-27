@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "academies": MessageLookupByLibrary.simpleMessage("الاكاديميات"),
+    "birthDate": MessageLookupByLibrary.simpleMessage("تاريخ الميــــلاد"),
     "clubStore": MessageLookupByLibrary.simpleMessage("متجر النادى"),
     "coachesMarketing": MessageLookupByLibrary.simpleMessage("تسويق مدربين"),
     "error": MessageLookupByLibrary.simpleMessage("خطأ"),
@@ -31,9 +32,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "ابحث عن لاعب, مدرب, اكاديمية ..",
     ),
     "menu": MessageLookupByLibrary.simpleMessage("المنيو"),
+    "nationality": MessageLookupByLibrary.simpleMessage("جنسية"),
     "profile": MessageLookupByLibrary.simpleMessage("البروفايل"),
     "services": MessageLookupByLibrary.simpleMessage("الخدمات"),
     "showAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+    "trainingLevel": MessageLookupByLibrary.simpleMessage("مستوى التدريب"),
     "upComingMatch": MessageLookupByLibrary.simpleMessage("المباراة القادمة"),
     "watch": MessageLookupByLibrary.simpleMessage("Watch"),
   };
