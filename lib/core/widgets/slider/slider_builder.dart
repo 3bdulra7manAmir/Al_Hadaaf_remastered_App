@@ -12,13 +12,13 @@ class CustomCarousel extends StatelessWidget
     required this.onPageChanged,
     required this.enlargeCenterPage,
     required this.autoPlay, 
-    required this.height,
+    this.height,
   });
 
   final List<String>? imgs;
   final List<Widget>? widgets;
   final CarouselSliderController controller;
-  final double height;
+  final double? height;
   final bool enlargeCenterPage;
   final bool autoPlay;
   final Function(int) onPageChanged;

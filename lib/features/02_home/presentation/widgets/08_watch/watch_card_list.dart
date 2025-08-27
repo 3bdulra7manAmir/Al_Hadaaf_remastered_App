@@ -11,9 +11,11 @@ class WatchCardList extends StatelessWidget
   const WatchCardList({super.key,});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return CustomListviewBuilder(
-      itemBuilder: (_, _) => InkWell(
+      itemBuilder: (_, _) => 
+      InkWell(
         onTap: () => AppLogger.info('Play Pressed...'),
         child: const WatchCard()
       ), 

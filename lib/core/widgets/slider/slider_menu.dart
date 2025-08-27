@@ -14,14 +14,14 @@ class PlayerScrollMenu extends StatefulWidget
     this.widgets,
     this.enlargeCenterPage, 
     this.autoPlay, 
-    required this.height
+    this.height
   });
 
   final List<String>? imgs;
   final List<Widget>? widgets;
   final bool? enlargeCenterPage;
   final bool? autoPlay;
-  final double height;
+  final double? height;
 
   @override
   State<PlayerScrollMenu> createState() => _PlayerScrollMenuState();

@@ -1,81 +1,67 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../core/constants/app_borders.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_paddings.dart';
 import '../../../../../core/constants/app_sizes.dart';
-import '../../../../../core/constants/app_styles.dart';
+import 'sport_icon.dart';
+import 'sport_name.dart';
 
-class SportWidget extends StatelessWidget
-{
-  const SportWidget({super.key});
 
-  // final String sportImgUrl;
-  // final String sportName;
+class SportWidget extends StatefulWidget {
+  const SportWidget({
+    super.key,
+    required this.sportName,
+    required this.iconPath,
+  });
+
+  final String sportName;
+  final String iconPath;
 
   @override
-  Widget build(BuildContext context)
-  {
-    return Container(
-      height: 38.h, //width: 121.w,  
-      padding: AppPadding.symmetric.sportWidget,
-      decoration: BoxDecoration(
-        borderRadius: AppRadiuses.circular.sportWidget,
-        //color: AppColors.color.kBlack003,
-        color: AppColors.color.kGreen001,
-      ),
-      child: Row(
-        children:
-        [
-          Sizes.s7.horizontalSpace,
-          const SportIcon(),
-          Sizes.s9.horizontalSpace,
-          const SportName(),
-          Sizes.s13.horizontalSpace,
-        ],
-      ),
-    );
-  }
+  State<SportWidget> createState() => _SportWidgetState();
 }
 
+class _SportWidgetState extends State<SportWidget> {
+  bool isSelected = false;
 
-class SportIcon extends StatelessWidget
-{
-  const SportIcon({super.key});
-
-  //final String sportIcon;
-  
-
-  @override
-  Widget build(BuildContext context)
-  {
-    return Container(
-      padding: AppPadding.all.sportBall,
-      decoration: BoxDecoration(
-        //borderRadius: AppRadiuses.circular.sportIcon,
-        color: AppColors.color.kWhite001.withValues(alpha: 0.25),
-        border: Border.all(color: AppColors.color.kWhite001.withValues(alpha: 0.7)),
-        shape: BoxShape.circle
-      ),
-      child: SvgPicture.asset(AppAssets.iconsSvg.sportSymbol),
-    );
+  void _toggleSelection() {
+    setState(() {
+      isSelected = !isSelected;
+    });
   }
-}
-
-
-class SportName extends StatelessWidget
-{
-  const SportName({super.key});
-
-  //final String sportName;
 
   @override
-  Widget build(BuildContext context)
-  {
-    return Text('كرة القدم', style: AppStyles.semiBold(),);
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _toggleSelection,
+      child: Container(
+        height: 38.h,
+        padding: AppPadding.symmetric.sportWidget,
+        decoration: BoxDecoration(
+          borderRadius: AppRadiuses.circular.sportWidget,
+          color: isSelected
+              ? AppColors.color.kGreen001 // Selected
+              : AppColors.color.kBlack003, // Unselected
+        ),
+        child: Row(
+          children: [
+            Sizes.s7.horizontalSpace,
+            SportIcon(
+              iconPath: widget.iconPath,
+              isSelected: isSelected,
+            ),
+            Sizes.s9.horizontalSpace,
+            SportName(
+              sportName: widget.sportName,
+              isSelected: isSelected,
+            ),
+            Sizes.s13.horizontalSpace,
+          ],
+        ),
+      ),
+    );
   }
 }
 

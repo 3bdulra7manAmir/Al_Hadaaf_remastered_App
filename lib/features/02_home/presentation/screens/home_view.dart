@@ -46,15 +46,13 @@ class Home extends StatelessWidget
           //Sizes.s26.verticalSpacer,
           PlayerScrollMenu(
             imgs: [AppAssets.imgsSvg.introCard, AppAssets.imgsSvg.introCard,], 
-            height: 171.h,
-          ),
+            height: 171.h,),
           Sizes.s23.verticalSpace,
           const UpComingMatchText(),
           Sizes.s10.verticalSpace,
           PlayerScrollMenu(
             imgs: [AppAssets.imgsSvg.upComingMatchCard, AppAssets.imgsSvg.upComingMatchCard,], 
-            height: 185.h,
-          ),
+            height: 185.h,),
           Sizes.s17.verticalSpace,
           CustomColumn(
             children:
@@ -65,12 +63,9 @@ class Home extends StatelessWidget
               Sizes.s21.verticalSpace,
               TitleAndShowAllText(title: S.current.coachesMarketing, onTap: () => AppLogger.info('ShowAll...'),),
               Sizes.s24.verticalSpace,
-              //Ahmed Sayed
               PlayerScrollMenu(
                 widgets: const [CoachesCard(),], 
-                height: 300.h,
-              ),
-              //
+                height: 300.h,),
               Sizes.s41.verticalSpace,
               TitleAndShowAllText(title: S.current.clubStore, onTap: () => AppLogger.info('ShowAll...'),),
               Sizes.s20.verticalSpace,
@@ -83,11 +78,9 @@ class Home extends StatelessWidget
           TitleAndShowAllText(
             isBackMargin: true,
             title: S.current.watch, 
-            onTap: () => AppLogger.info('ShowAll...'),
-          ),
+            onTap: () => AppLogger.info('ShowAll...'),),
           Sizes.s8.verticalSpace,
           SizedBox(height: 163.h, child: const WatchCardList()),
-
           Sizes.s24.verticalSpace,
         ],
       ),
