@@ -39,7 +39,7 @@ class CustomSingleChild extends StatelessWidget
       child: Column(
         crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
         children: children
-      ).marginDirectional(start: (isMargin ?? false) ? 27.w : 0),
+      ).marginDirectional(start: (isMargin ?? true) ? 27.w : 0,),
     );
   }
 }

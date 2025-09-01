@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/widgets/app_background.dart';
 import '../../core/widgets/navbar/nav_bar_widget.dart';
-import '../../features/02_home/presentation/widgets/01_home_appbar/home_appbar.dart';
+import '../../features/02_main_page/01_home/presentation/widgets/01_home_appbar/home_appbar.dart';
 
 class MainScaffold extends StatelessWidget
 {
@@ -18,14 +19,9 @@ class MainScaffold extends StatelessWidget
     final currentIndex = navigationShell.currentIndex;
     return Scaffold(
       appBar: _buildAppBar(currentIndex),
-      body: navigationShell,
-      //backgroundColor: AppColors.color.kBlack002,
-      //bottomNavigationBar: CustomButtomNavBar(
-      //   currentIndex: currentIndex, onTap: _goBranch,
-      // ),
+      body: BackgroundColor(child: navigationShell),
       floatingActionButton: CustomButtomNavBar(
-        currentIndex: currentIndex,
-        onTap: _goBranch,
+        currentIndex: currentIndex, onTap: _goBranch,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
@@ -37,8 +33,8 @@ class MainScaffold extends StatelessWidget
     {
       case 0:
         return const HomeAppBar();
-      // case 1:
-      //   return const ;
+      case 1:
+        return const HomeAppBar();
       // case 2:
       //   return const ;
       // case 3:

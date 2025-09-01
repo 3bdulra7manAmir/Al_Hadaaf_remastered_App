@@ -7,13 +7,13 @@ abstract class ColorManagerBase
   Color get kTransparent;
 
   // Black Color Range
-  /// [000000] //NotUsed
+  /// [000000]
   Color get kBlack001;
   /// [2D2D2D]
   Color get kBlack002;
   /// [333333]
   Color get kBlack003;
-  /// [000000]
+  /// [323232]
   Color get kBlack004;
 
   // Grey Color Range
@@ -52,4 +52,8 @@ abstract class GradientManagerBase {
   /* [Color(0xff161616), Color(0xff2D2D2D), 
     Color(0xff2D2D2D), Color(0xff161616),] */
   SweepGradient get kBackgroundLinear;
+
+  /* [Color(0xff161616), Color(0xff2D2D2D), 
+    Color(0xff2D2D2D), Color(0xff161616),] */
+  LinearGradient get kServiceCardGradient;
 }

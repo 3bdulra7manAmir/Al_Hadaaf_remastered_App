@@ -2,10 +2,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../core/constants/app_styles.dart';
 import '../../core/widgets/circular_indicator.dart';
 import '../../features/01_onboarding/presentation/screens/splash_view.dart';
-import '../../features/02_home/presentation/screens/home_view.dart';
+import '../../features/02_main_page/01_home/presentation/screens/home_view.dart';
+import '../../features/02_main_page/02_services/presentation/screens/services_view.dart';
 import 'app_routes.dart';
 import 'nav_bar_navigator.dart';
 import 'route_observer.dart';
@@ -51,9 +51,7 @@ abstract class AppRouter
               GoRoute(
                 path: AppRoutes.services,
                 name: AppRoutes.services,
-                builder: (_, _) => Scaffold(
-                  body: Center(child: Text('Services Screen Placeholder', style: AppStyles.semiBold(),)),
-                ),
+                builder: (_, _) => Services(),
               ),
             ],
           ),

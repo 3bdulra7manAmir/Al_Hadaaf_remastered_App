@@ -43,7 +43,9 @@ class _IconsSvg
   //[ Play White .svg ]
   final String playWhite = 'assets/icons/Home/Play_white.svg';
 
-
+  ///[ Services ]
+  //[ Service .svg ]
+  final String servicesIcon = 'assets/icons/Services/Service.svg';
 
   //[ Bottom Nav Bar ]
   final String home = 'assets/icons/Bottom_Nav_Bar/Home.svg';

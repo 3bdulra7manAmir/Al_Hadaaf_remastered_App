@@ -30,22 +30,56 @@ class NavBarItem extends StatelessWidget
     final Color inactiveColor = AppColors.color.kWhite001.withValues(alpha: 0.7);
     return GestureDetector(
       onTap: onTap,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children:
-        [
-          isAvatar ? Container(width: 20.w, height: 20.h,
-            decoration: const BoxDecoration(shape: BoxShape.circle),
-            child: Image.asset(icon, width: 20.w, height: 20.h,),
-          ) 
-            : SvgPicture.asset(icon, width: 20.w, height: 20.h,
-              colorFilter: isSelected ? ColorFilter.mode(activeColor, BlendMode.srcIn)
-                : null,),
-          Sizes.s10.verticalSpace,
-          Text(title, style: AppStyles.semiThin(fontColor: isSelected ? activeColor : inactiveColor,),
-          ),
-        ],
+      child: NavBarItemWidget(
+        isAvatar: isAvatar, 
+        icon: icon, 
+        isSelected: isSelected, 
+        activeColor: activeColor, 
+        title: title, 
+        inactiveColor: inactiveColor
       ),
+    );
+  }
+}
+
+class NavBarItemWidget extends StatelessWidget
+{
+  const NavBarItemWidget({
+    super.key,
+    required this.isAvatar,
+    required this.icon,
+    required this.isSelected,
+    required this.activeColor,
+    required this.title,
+    required this.inactiveColor,
+  });
+
+  final bool isAvatar;
+  final String icon;
+  final bool isSelected;
+  final Color activeColor;
+  final String title;
+  final Color inactiveColor;
+
+  @override
+  Widget build(BuildContext context)
+  {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children:
+      [
+        isAvatar ? Container(width: 20.w, height: 20.h,
+          decoration: const BoxDecoration(shape: BoxShape.circle),
+          child: Image.asset(icon, width: 20.w, height: 20.h,),
+        ) 
+          : SvgPicture.asset(icon, width: 20.w, height: 20.h,
+            colorFilter: isSelected ? ColorFilter.mode(activeColor, BlendMode.srcIn)
+              : null,),
+        Sizes.s10.verticalSpace,
+        Text(title, style: AppStyles.semiThin(
+          fontColor: isSelected ? activeColor : inactiveColor,),
+        ),
+      ],
     );
   }
 }

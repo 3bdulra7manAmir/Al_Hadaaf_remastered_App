@@ -19,8 +19,8 @@ class DarkColorScheme extends ColorManagerBase
   /// [333333]
   Color get kBlack003 => const Color(0xff333333);
   @override
-  /// [333333]
-  Color get kBlack004 => const Color(0xff333333);
+  /// [323232]
+  Color get kBlack004 => const Color(0xff323232);
 
   // Grey Color Range
   @override
@@ -62,12 +62,22 @@ class DarkColorScheme extends ColorManagerBase
 class DarkGradients extends GradientManagerBase {
   @override
   SweepGradient get kBackgroundLinear => const SweepGradient(
-        colors: [
-          Color(0xff161616),
-          Color(0xff2D2D2D),
-          Color(0xff161616),
-          Color(0xff2D2D2D),
-          Color(0xff161616),
-        ],
-      );
+    colors: [
+      Color(0xff161616),
+      Color(0xff2D2D2D),
+      Color(0xff161616),
+      Color(0xff2D2D2D),
+      Color(0xff161616),
+    ],
+  );
+
+  @override
+  LinearGradient get kServiceCardGradient=> LinearGradient(
+    colors: [
+      const Color(0xff2AAE1D).withValues(alpha: 1),
+      const Color(0xffFFFFFF).withValues(alpha: 0),
+      const Color(0xffFFFFFF).withValues(alpha: 0),
+      const Color(0xff2AAE1D).withValues(alpha: 1),
+    ],
+  );
 }
