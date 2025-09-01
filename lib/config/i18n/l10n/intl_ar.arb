@@ -18,5 +18,18 @@
 
   "trainingLevel": "مستوى التدريب",
   "nationality": "جنسية",
-  "birthDate": "تاريخ الميــــلاد"
+  "birthDate": "تاريخ الميــــلاد",
+
+
+  "playersMarketing": "تسويق لاعبين",
+  "clubsStores": "متاجر الاندية",
+  "coacheMarketing": "تسويق مدربين",
+  "news": "الهداف نيوز",
+  "expectations": "التوقعات",
+  "livings": "المعايشات",
+  "sport": "الهداف سبورت",
+  "deals": "المزادات",
+  "reserveClub": "حجز نادى رياضى",
+  "healthyRestaurants": "المطاعم الصحية",
+  "goals": "اهداف لا تفوتك"
 }

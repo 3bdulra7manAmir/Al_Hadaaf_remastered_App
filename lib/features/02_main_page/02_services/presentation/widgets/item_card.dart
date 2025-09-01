@@ -5,13 +5,19 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../config/theme/color_manager/colors.dart';
 import '../../../../../config/theme/font_manager/font_weights.dart';
 import '../../../../../core/constants/app_borders.dart';
-import '../../../../../core/constants/app_images.dart';
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../../../core/constants/app_styles.dart';
 
 class ServiceItemCard extends StatelessWidget
 {
-  const ServiceItemCard({super.key});
+  const ServiceItemCard({
+    super.key,
+    required this.serviceImg,
+    required this.serviceName,
+  });
+
+  final String serviceImg;
+  final String serviceName;
 
   @override
   Widget build(BuildContext context)
@@ -33,12 +39,12 @@ class ServiceItemCard extends StatelessWidget
             else...
             [Sizes.s7.verticalSpace,],
             SvgPicture.asset(
-              AppAssets.iconsSvg.servicesIcon, 
+              serviceImg, 
               width: 53.442344665527344.w, 
               height: 26.00001335144043.h,
             ),
             Sizes.s16.verticalSpace,
-            Text('حجز نادى رياضى', style: AppStyles.thin(
+            Text(serviceName, style: AppStyles.thin(
               fontWeight: AppFontWeights.semiBoldWeight),
               textAlign: TextAlign.center,
             ),

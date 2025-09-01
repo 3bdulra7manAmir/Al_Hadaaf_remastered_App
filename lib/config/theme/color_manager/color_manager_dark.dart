@@ -70,6 +70,17 @@ class DarkGradients extends GradientManagerBase {
       Color(0xff161616),
     ],
   );
+  
+  @override
+  SweepGradient get kBackgroundAppBarSweep => const SweepGradient(
+    colors: [
+      Color(0xff161616),
+      Color(0xff2D2D2D),
+      Color(0xff161616),
+      Color(0xff2D2D2D),
+      Color(0xff161616),
+    ],
+  );
 
   @override
   LinearGradient get kServiceCardGradient=> LinearGradient(

@@ -18,5 +18,18 @@
 
   "trainingLevel": "Training Level",
   "nationality": "Nationality",
-  "birthDate": "Date of Birth"
+  "birthDate": "Date of Birth",
+
+
+  "playersMarketing": "Players Marketing",
+  "clubsStores": "Club Stores",
+  "coacheMarketing": "Coaches Marketing",
+  "news": "Al-Hadaf News",
+  "expectations": "Expectations",
+  "livings": "Livings",
+  "sport": "Al-Hadaf Sport",
+  "deals": "Auctions",
+  "reserveClub": "Reserve a Sports Club",
+  "healthyRestaurants": "Healthy Restaurants",
+  "goals": "Goals You Can’t Miss"
 }

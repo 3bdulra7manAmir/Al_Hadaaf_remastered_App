@@ -55,5 +55,9 @@ abstract class GradientManagerBase {
 
   /* [Color(0xff161616), Color(0xff2D2D2D), 
     Color(0xff2D2D2D), Color(0xff161616),] */
+  SweepGradient get kBackgroundAppBarSweep;
+
+  /* [Color(0xff161616), Color(0xff2D2D2D), 
+    Color(0xff2D2D2D), Color(0xff161616),] */
   LinearGradient get kServiceCardGradient;
 }

@@ -153,6 +153,86 @@ class S {
       args: [],
     );
   }
+
+  /// `تسويق لاعبين`
+  String get playersMarketing {
+    return Intl.message(
+      'تسويق لاعبين',
+      name: 'playersMarketing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `متاجر الاندية`
+  String get clubsStores {
+    return Intl.message(
+      'متاجر الاندية',
+      name: 'clubsStores',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسويق مدربين`
+  String get coacheMarketing {
+    return Intl.message(
+      'تسويق مدربين',
+      name: 'coacheMarketing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الهداف نيوز`
+  String get news {
+    return Intl.message('الهداف نيوز', name: 'news', desc: '', args: []);
+  }
+
+  /// `التوقعات`
+  String get expectations {
+    return Intl.message('التوقعات', name: 'expectations', desc: '', args: []);
+  }
+
+  /// `المعايشات`
+  String get livings {
+    return Intl.message('المعايشات', name: 'livings', desc: '', args: []);
+  }
+
+  /// `الهداف سبورت`
+  String get sport {
+    return Intl.message('الهداف سبورت', name: 'sport', desc: '', args: []);
+  }
+
+  /// `المزادات`
+  String get deals {
+    return Intl.message('المزادات', name: 'deals', desc: '', args: []);
+  }
+
+  /// `حجز نادى رياضى`
+  String get reserveClub {
+    return Intl.message(
+      'حجز نادى رياضى',
+      name: 'reserveClub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المطاعم الصحية`
+  String get healthyRestaurants {
+    return Intl.message(
+      'المطاعم الصحية',
+      name: 'healthyRestaurants',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اهداف لا تفوتك`
+  String get goals {
+    return Intl.message('اهداف لا تفوتك', name: 'goals', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

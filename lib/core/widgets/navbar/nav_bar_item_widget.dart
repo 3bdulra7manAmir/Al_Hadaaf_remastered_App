@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../config/theme/color_manager/colors.dart';
-import '../../constants/app_sizes.dart';
 import '../../constants/app_styles.dart';
 
 class NavBarItem extends StatelessWidget
@@ -30,56 +29,69 @@ class NavBarItem extends StatelessWidget
     final Color inactiveColor = AppColors.color.kWhite001.withValues(alpha: 0.7);
     return GestureDetector(
       onTap: onTap,
-      child: NavBarItemWidget(
-        isAvatar: isAvatar, 
-        icon: icon, 
-        isSelected: isSelected, 
-        activeColor: activeColor, 
-        title: title, 
-        inactiveColor: inactiveColor
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children:
+        [
+          isAvatar ? Container(width: 20.w, height: 20.h,
+            decoration: const BoxDecoration(shape: BoxShape.circle),
+            child: Image.asset(icon, width: 20.w, height: 20.h,),
+          ) 
+            : SvgPicture.asset(icon, width: 20.w, height: 20.h,
+              colorFilter: isSelected ? ColorFilter.mode(activeColor, BlendMode.srcIn)
+                : null,),
+          GestureDetector(
+            onTap: onTap,
+            child: Container(height: 10.w, width: 29.h, color: AppColors.color.kTransparent,)
+          ),
+          Text(title, style: AppStyles.semiThin(
+            fontColor: isSelected ? activeColor : inactiveColor,),
+          ),
+        ],
       ),
     );
   }
 }
 
-class NavBarItemWidget extends StatelessWidget
-{
-  const NavBarItemWidget({
-    super.key,
-    required this.isAvatar,
-    required this.icon,
-    required this.isSelected,
-    required this.activeColor,
-    required this.title,
-    required this.inactiveColor,
-  });
 
-  final bool isAvatar;
-  final String icon;
-  final bool isSelected;
-  final Color activeColor;
-  final String title;
-  final Color inactiveColor;
+// class NavBarItemWidget extends StatelessWidget
+// {
+//   const NavBarItemWidget({
+//     super.key,
+//     required this.isAvatar,
+//     required this.icon,
+//     required this.isSelected,
+//     required this.activeColor,
+//     required this.title,
+//     required this.inactiveColor,
+//   });
 
-  @override
-  Widget build(BuildContext context)
-  {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children:
-      [
-        isAvatar ? Container(width: 20.w, height: 20.h,
-          decoration: const BoxDecoration(shape: BoxShape.circle),
-          child: Image.asset(icon, width: 20.w, height: 20.h,),
-        ) 
-          : SvgPicture.asset(icon, width: 20.w, height: 20.h,
-            colorFilter: isSelected ? ColorFilter.mode(activeColor, BlendMode.srcIn)
-              : null,),
-        Sizes.s10.verticalSpace,
-        Text(title, style: AppStyles.semiThin(
-          fontColor: isSelected ? activeColor : inactiveColor,),
-        ),
-      ],
-    );
-  }
-}
+//   final bool isAvatar;
+//   final String icon;
+//   final bool isSelected;
+//   final Color activeColor;
+//   final String title;
+//   final Color inactiveColor;
+
+//   @override
+//   Widget build(BuildContext context)
+//   {
+//     return Column(
+//       mainAxisSize: MainAxisSize.min,
+//       children:
+//       [
+//         isAvatar ? Container(width: 20.w, height: 20.h,
+//           decoration: const BoxDecoration(shape: BoxShape.circle),
+//           child: Image.asset(icon, width: 20.w, height: 20.h,),
+//         ) 
+//           : SvgPicture.asset(icon, width: 20.w, height: 20.h,
+//             colorFilter: isSelected ? ColorFilter.mode(activeColor, BlendMode.srcIn)
+//               : null,),
+//         Sizes.s10.verticalSpace,
+//         Text(title, style: AppStyles.semiThin(
+//           fontColor: isSelected ? activeColor : inactiveColor,),
+//         ),
+//       ],
+//     );
+//   }
+// }

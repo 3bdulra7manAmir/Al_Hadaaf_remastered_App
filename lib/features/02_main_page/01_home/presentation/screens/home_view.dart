@@ -79,8 +79,8 @@ class Home extends StatelessWidget
           onTap: () => AppLogger.info('ShowAll...'),),
         Sizes.s8.verticalSpace,
         SizedBox(height: 163.h, child: const WatchCardList()),
-        //Sizes.s24.verticalSpace,
-        Sizes.s120.verticalSpace,
+        Sizes.s24.verticalSpace,
+        //Sizes.s120.verticalSpace,
       ],
     );
   }

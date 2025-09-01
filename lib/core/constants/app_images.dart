@@ -45,7 +45,18 @@ class _IconsSvg
 
   ///[ Services ]
   //[ Service .svg ]
-  final String servicesIcon = 'assets/icons/Services/Service.svg';
+  final String playersMarketing = 'assets/icons/Services/Players_marketing.svg';
+  final String academies = 'assets/icons/Services/Academies.svg';
+  final String clubStore = 'assets/icons/Services/Club_store.svg';
+  final String coacheMarketing = 'assets/icons/Services/Coache_marketing.svg';
+  final String deals = 'assets/icons/Services/Deals.svg';
+  final String goals = 'assets/icons/Services/Goals.svg';
+  final String healthyResturants = 'assets/icons/Services/Healthy_resturants.svg';
+  final String livings = 'assets/icons/Services/Livings.svg';
+  final String news = 'assets/icons/Services/News.svg';
+  final String reserveClub = 'assets/icons/Services/Reserve_club.svg';
+  final String sport = 'assets/icons/Services/Sport.svg';
+  final String expectations = 'assets/icons/Services/Expectations.svg';
 
   //[ Bottom Nav Bar ]
   final String home = 'assets/icons/Bottom_Nav_Bar/Home.svg';

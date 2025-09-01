@@ -20,7 +20,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget
   Widget build(BuildContext context)
   {
     return Container(
-      decoration: BoxDecoration(gradient: AppColors.gradient.kBackgroundLinear),
+      decoration: BoxDecoration(gradient: AppColors.gradient.kBackgroundAppBarSweep),
       child: CustomAppBar(
         leading: GestureDetector(
           onTap: () {

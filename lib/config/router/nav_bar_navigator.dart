@@ -18,7 +18,7 @@ class MainScaffold extends StatelessWidget
   {
     final currentIndex = navigationShell.currentIndex;
     return Scaffold(
-      appBar: _buildAppBar(currentIndex),
+      appBar: const HomeAppBar(),
       body: BackgroundColor(child: navigationShell),
       floatingActionButton: CustomButtomNavBar(
         currentIndex: currentIndex, onTap: _goBranch,
@@ -27,20 +27,23 @@ class MainScaffold extends StatelessWidget
     );
   }
 
-  PreferredSizeWidget? _buildAppBar(int index)
-  {
-    switch (index)
-    {
-      case 0:
-        return const HomeAppBar();
-      case 1:
-        return const HomeAppBar();
-      // case 2:
-      //   return const ;
-      // case 3:
-      //   return const ;
-      default:
-        return null;
-    }
-  }
+
+  // PreferredSizeWidget? _buildAppBar(int index)
+  // {
+  //   switch (index)
+  //   {
+  //     case 0:
+  //       return const HomeAppBar();
+  //     case 1:
+  //       return const HomeAppBar();
+  //     // case 2:
+  //     //   return const ;
+  //     // case 3:
+  //     //   return const ;
+  //     default:
+  //       return null;
+  //   }
+  // }
+
+
 }

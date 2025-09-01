@@ -72,6 +72,17 @@ class LightGradients extends GradientManagerBase {
   );
 
   @override
+  SweepGradient get kBackgroundAppBarSweep => const SweepGradient(
+    colors: [
+      Color(0xff161616),
+      Color(0xff222222),
+      Color(0xff161616),
+      Color(0xff222222),
+      Color(0xff161616),
+    ],
+  );
+
+  @override
   LinearGradient get kServiceCardGradient=> LinearGradient(
     colors: [
       const Color(0xff2AAE1D).withValues(alpha: 1),
