@@ -7,9 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../config/i18n/generated/l10n.dart';
 import '../config/router/app_router.dart';
 import '../config/theme/theme_manager/themes.dart';
+import 'config/cubit_states.dart';
 import 'config/i18n/localization_controller/localization_cubit.dart';
 import 'config/theme/theme_controller/theme_cubit.dart';
-import 'core/utils/cubit_states.dart';
 
 class AlHadaaf extends StatelessWidget
 {

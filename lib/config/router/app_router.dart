@@ -7,7 +7,7 @@ import '../../features/01_onboarding/presentation/screens/splash_view.dart';
 import '../../features/02_main_page/01_home/presentation/screens/home_view.dart';
 import '../../features/02_main_page/02_services/presentation/screens/services_view.dart';
 import 'app_routes.dart';
-import 'nav_bar_navigator.dart';
+import 'bottom_nav_bar/nav_bar_navigator.dart';
 import 'route_observer.dart';
 
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../core/widgets/app_background.dart';
-import '../../core/widgets/navbar/nav_bar_widget.dart';
-import '../../features/02_main_page/01_home/presentation/widgets/01_home_appbar/home_appbar.dart';
+import '../../../core/widgets/app_background.dart';
+import '../../../core/widgets/navbar/nav_bar_widget.dart';
+import 'app_appbar.dart';
 
 class MainScaffold extends StatelessWidget
 {

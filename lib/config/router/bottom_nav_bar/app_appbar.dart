@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../../config/router/app_router.dart';
-import '../../../../../../config/router/app_routes.dart';
-import '../../../../../../config/theme/color_manager/colors.dart';
-import '../../../../../../core/constants/app_images.dart';
-import '../../../../../../core/constants/app_margins.dart';
-import '../../../../../../core/extensions/margin.dart';
-import '../../../../../../core/utils/logger/app_logger.dart';
-import '../../../../../../core/widgets/appbar.dart';
+import '../../../core/constants/app_images.dart';
+import '../../../core/constants/app_margins.dart';
+import '../../../core/extensions/margin.dart';
+import '../../../core/utils/logger/app_logger.dart';
+import '../../../core/widgets/appbar.dart';
+import '../../theme/color_manager/colors.dart';
+import '../app_router.dart';
+import '../app_routes.dart';
 
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget
@@ -23,7 +23,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget
       decoration: BoxDecoration(gradient: AppColors.gradient.kBackgroundAppBarSweep),
       child: CustomAppBar(
         leading: GestureDetector(
-          onTap: () {
+          onTap: ()
+          {
             AppLogger.info('AlHadaaf Logo Pressed...');
             AppRouter.router.goNamed(AppRoutes.home);
             // اي خدمة يا خـــــال
